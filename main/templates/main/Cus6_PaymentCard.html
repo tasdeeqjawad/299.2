@@ -1,0 +1,183 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="home">
+            <p class="menu">
+                <a href="{% url 'index' %}">Home</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu">
+                <a href="{% url 'Admin5_AboutUs' %}">About Us</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu">
+                <a href="{% url 'Cus2_LoginPage' %}">Logout</a>
+            </p>
+        </div>
+
+        <form action="/payment" method="post">
+            <h1 class="main-heading">Pay via Card</h1>
+            <hr>
+
+            <section>
+                <h2>User Information</h2>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="pincode">Password:</label>
+                    <input type="password" id="pincode" name="pincode" required>
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>Payment Information</h2>
+                <div>
+                    <p>Accepted Cards are: Visa and Mastercard</p>
+                    <label for="card_type">Card Type:</label>
+                    <select name="card_type" id="card_type" required>
+                        <option value="" disabled selected>--Select a Card Type</option>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">MasterCard</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="card_number">Card Number:</label>
+                    <input type="text" id="card_number" name="card_number" placeholder="5555-6666-7777-8888" required>
+                </div>
+
+                <div>
+                    <label for="exp_date">Expiration Date:</label>
+                    <input type="text" id="exp_date" name="exp_date" placeholder="MM/YYYY" required>
+                </div>
+
+                <div>
+                    <label for="cvv">CVV(Passcode):</label>
+                    <input type="password" id="cvv" name="cvv" placeholder="123" required>
+                </div>
+            </section>
+
+            <input type="submit" value="Pay Now">
+        </form>
+    </div>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-image: url("{% static 'images/trainHome4.jpg' %}");
+        margin: 10%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+    
+    .container {
+        border: 1px rgba(0, 0, 0, 0.76) solid;
+        background-color: rgba(159, 160, 148, 0.699);
+        border-radius: 10px;
+        text-align: center;
+        margin: 0 33.3%;
+        padding: 10px;
+        margin-bottom: 10px;
+        color: rgba(143, 17, 17, 0.733);
+        width: 500px;
+    }
+    
+    .menu {
+        border: 1px black solid;
+        border-radius: 10px;
+        background-color: rgb(247, 248, 245);
+        color: rgb(207, 84, 27);
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+        display: inline-block;
+        margin: auto;
+        padding: 5px;
+        margin-top: 6px;
+    }
+    
+    a:hover {
+        color: red;
+    }
+    
+    a:link {
+        color: green;
+        text-decoration: none;
+    }
+    
+    .main-heading {
+        color: #cc0066;
+        font-weight: bold;
+        font-size: 40px;
+    }
+    
+    section {
+        margin-top: 20px;
+    }
+    
+    hr {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: none;
+        border-top: 1px solid #ccc;
+    }
+    
+    select, input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    
+</style>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+body {
+    background-image: url("/images/flag_on_wall1.jpeg");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    display: block;
+    margin: 1px 0;
+    cursor: pointer;
+    background-color: #f2f2f275;
+    padding: 3px;
+    border: 1px solid #dddddd0e;
+}
+
+table {
+    display: none;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 3px double #0e0d0df1; /* Add this line for double border */
+    padding: 3px;
+    text-align: left;
+    background-color: #f2f2f277;
+}
+
+th {
+    background-color: #f2f2f27a;
+}
+
+input[type="radio"]:checked + label + table {
+    display: table;
+}

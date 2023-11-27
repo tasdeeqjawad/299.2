@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+.inlineimage {
+	max-width: 470px;
+	margin-right: 8px;
+	margin-left: 10px
+}
+
+body {
+    background-image: url("{% static 'images/trainHome4.jpg' %}");
+    margin: 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keep the background fixed while scrolling */
+    background-position: center;
+}
+
+.hd {
+    text-align: center;
+    padding: 10px;
+    margin-right: 5%;
+    color: #cc006698;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.container {
+    border: 1px solid rgba(0, 0, 0, 0.589);
+    background-color: rgba(126, 241, 32, 0.61);
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 33.3%;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: rgba(136, 5, 5, 0.555);
+    max-width: 500px; /* Adjusted to be responsive */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu {
+    border: 1px solid rgba(0, 0, 0, 0.589);
+    border-radius: 10px;
+    background-color: rgba(62, 83, 20, 0.541);
+    color: rgba(207, 84, 27, 0.568);
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    margin: auto;
+    padding: 5px;
+    margin-top: 6px;
+}
+
+a:hover {
+    color: rgba(255, 0, 0, 0.616);
+}
+
+a:link {
+    color: rgba(0, 128, 0, 0.644);
+    text-decoration: none;
+}
+
+.tab {
+    border: 1px solid rgba(0, 0, 0, 0.637);
+    border-radius: 15px;
+    background-color: #ffe5cca1;
+    margin: 10px auto; /* Adjusted to be responsive */
+    max-width: 800px; /* Adjusted to be responsive */
+    color: rgba(0, 0, 0, 0.575);
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.home {
+    border: 1px solid rgba(0, 0, 0, 0.596);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 0, 0.651);
+    margin-left: -10%;
+    color: rgba(0, 0, 255, 0.637);
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    height: 40px;
+    padding: auto;
+    float: left;
+    clear: both;
+    width: 160px;
+}
+
+table {
+    border: 2px solid rgba(0, 0, 0, 0.61);
+    text-align: center;
+    padding: 5px;
+    width: 100%; /* Adjusted to be responsive */
+}
+
+tr:hover {
+    background-color: #f5f5f593;
+    color: rgba(0, 0, 0, 0.596);
+}
+
+td, th {
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.644);
+}
+
+th {
+    color: rgba(0, 0, 255, 0.651);
+    font-size: 20px;
+}
+
+footer {
+    margin-top: 25%;
+}

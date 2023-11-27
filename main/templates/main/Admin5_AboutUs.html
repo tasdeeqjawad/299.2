@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Train Transport System</title>
+    <link rel="stylesheet" href="static/css/AboutUs.css">
+
+  <!--  <nav>
+        <ul class="menu">
+            <li class><a href="{% url 'index' %}">Home</a></li>
+            <li class><a href="{% url 'Cus2_LoginPage' %}">Login</a></li>
+           
+        
+        </ul>
+    </nav>-->
+
+    <!-- Logos from fontawesome.com -->
+    <script src="https://kit.fontawesome.com/7a4b62b0a4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="about-section">
+        <button class="button"><a href="{% url 'index' %}">Home</a></button>
+        <button class="button"><a href="{% url 'Cus2_LoginPage' %}">Login</a></button>
+        <h1>All About Us</h1>
+        <p>We did this for our CSE299 course. Thank you.</p>
+    </div>
+
+    <h2 style="text-align: center">Our Team</h2>
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="{% static 'images/Rafid_pic.jpg' %}" alt="Rafid" style="width:100%">
+                <div class="container">
+                    <h2>Rafid Ul Karim</h2>
+                    <p class="title">Project Head</p>
+                    <p>Database manager and backend developer.</p>
+                    <p>rafidulkarim@gmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="{% static 'images/Tasdeeq_pic1.jpeg' %}" alt="Tasdeeq" style="width:100%">
+                <div class="container">
+                    <h2>Tasdeeq Jawad</h2>
+                    <p class="title">Backend</p>
+                    <p>Backend developer.</p>
+                    <p>tasdeeqjawad@gmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="{% static 'images/Arifa_pic.jpg' %}" alt="Arifa" style="width:100%">
+                <div class="container">
+                    <h2>Arifa Akbor</h2>
+                    <p class="title">Frontend</p>
+                    <p>Frontend.</p>
+                    <p>arifaakbor@gmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="{% static 'images/Saad_pic.jpg' %}" alt="Saad" style="width:100%">
+                <div class="container">
+                    <h2>Tahmid Karim Saad</h2>
+                    <p class="title">Frontend</p>
+                    <p>Frontend.</p>
+                    <p>tahmidsaad@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+
+        body {
+            background-color: grey;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+          }
+          
+          html {
+            box-sizing: border-box;
+          }
+          
+          *, *:before, *:after {
+            box-sizing: inherit;
+          }
+          
+          .column {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+          }
+          
+          .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+          }
+          
+          .about-section {
+            padding: 50px;
+            text-align: center;
+            background-color: #474e5d;
+            color: white;
+          }
+
+          .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            margin-right: 10px; /* Adjust the margin as needed */
+          }
+          
+          .container {
+            padding: 0 16px;
+          }
+          
+          .container::after, .row::after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+          
+          .title {
+            color: grey;
+          }
+          
+          .button:hover {
+            background-color: #555;
+          }
+          
+          @media screen and (max-width: 650px) {
+            .column {
+              width: 100%;
+              display: block;
+            }
+          }
+
+    </style>
+
+</body>
+
+</html>
